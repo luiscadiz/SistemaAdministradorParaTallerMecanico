@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SistemaAdminTaller.Models;
 
 namespace SistemaAdminTaller.Data
 {
@@ -12,5 +13,9 @@ namespace SistemaAdminTaller.Data
             : base(options)
         {
         }
+
+        public DbSet<Cliente> Clientes { get; set; }
+
+
     }
 }
