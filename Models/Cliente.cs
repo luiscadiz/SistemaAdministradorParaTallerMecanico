@@ -12,17 +12,17 @@ namespace  SistemaAdminTaller.Models
         public Guid ID {get; set;}
 
         [MaxLength(200)]
-        [Required]
+        [Required(ErrorMessage="El nombre es requerido")]
         public string Nombre {get ;set;}
 
         [MaxLength(200)]
-        [Required]
+        [Required(ErrorMessage="El apellido es requerido")]
         public string Apellido {get; set;}
 
         [MaxLength(200)]
         public string Dirección {get; set;}
 
-        [Required]
+        [Required(ErrorMessage="El telefono es requerido")]
         [MaxLength(50)]
         public string Telefono {get; set;}
 

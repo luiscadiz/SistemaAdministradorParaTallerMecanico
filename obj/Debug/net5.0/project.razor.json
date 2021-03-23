@@ -15693,6 +15693,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\Views\\Clientes\\Details.cshtml",
+      "TargetPath": "Views\\Clientes\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -15703,8 +15708,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\Views\\Clientes\\Index.cshtml",
+      "TargetPath": "Views\\Clientes\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\Views\\Clientes\\Delete.cshtml",
+      "TargetPath": "Views\\Clientes\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\Views\\Clientes\\Edit.cshtml",
+      "TargetPath": "Views\\Clientes\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
