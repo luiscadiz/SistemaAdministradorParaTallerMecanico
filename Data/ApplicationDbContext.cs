@@ -13,10 +13,10 @@ namespace SistemaAdminTaller.Data
             : base(options)
         {
         }
-        public DbSet<SistemaAdminTaller.Models.Cliente> Cliente { get; set; }
-
-        //public DbSet<Cliente> Clientes { get; set; }
-
+        public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Vehiculo> Vehiculos {get; set;}
+        public DbSet<Mecanico> Mecanicos {get; set;}
+        public DbSet<Repuesto> Repuestos {get; set;}
 
     }
 }

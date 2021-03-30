@@ -4,25 +4,28 @@
     ViewData["Title"] = "Clientes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@* @section Styles {
+    <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
+} *@
 
-@*------------BOTON PARA INVOCAR EL MODAL DE REGISTRAR NUEVO CLIENTE----------------------------------- *@
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Nuevo Cliente</button>
-
-<div>
-    <br>
+<div class="container-fluid">
+    <hr />
+    @*------------BOTON PARA INVOCAR EL MODAL DE REGISTRAR NUEVO CLIENTE----------------------------------- *@
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Nuevo Cliente</button>
+    <hr />
+    <div class="container-fluid">
+        <table id="table_id" class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Domicilio</th>
+                    <th>Telefono</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 </div>
-
-<table id="table_id" class="table">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Domicilio</th>
-            <th>Telefono</th>
-        </tr>
-    </thead>
-</table>
-
 
 @* -----------------------------MODAL DE REGISTRAR UN CLIENTE------------------------------------------------- *@
 
@@ -54,14 +57,7 @@
                         <label asp-for="Telefono"></label>
                         <input asp-for="Telefono" class="form-control" placeholder="Telefono"/>
                         <span asp-validation-for="Telefono" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Vehiculo</label>
-                        <select name="" class = "form-control">
-                            <option value="">Zanella</option>
-                            <option value="">Guerrero</option>
-                        </select>
-                    </div>                
+                    </div>               
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
@@ -74,6 +70,22 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+    $(document).ready(function () {
+    $('#table_id').DataTable({
+        "ajax": {
+            "url": "/Clientes/ObtenerClientes"
+        },
+        "columns": [
+            { "data": "nombre" },
+            { "data": "apellido" },
+            { "data": "dirección" },
+            { "data": "telefono" },
+        ]
+        });
+    });
+    </script>
+    
 }
 
 

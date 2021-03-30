@@ -25,6 +25,14 @@ namespace SistemaAdminTaller.Controllers
             return View();
         }
 
+        [HttpGet]
+        public async Task<IActionResult> ObtenerClientes()
+        {
+            var ClientesTodos = await _context.Cliente.ToListAsync();
+        
+            return Json(new {data = ClientesTodos});
+        }
+
         //POST: //Clientes/Registrar
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -39,12 +47,7 @@ namespace SistemaAdminTaller.Controllers
             return View(cliente);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> ObtenerClientes()
-        {
-            var ClientesTodos = await _context.Cliente.ToListAsync();
-            return Json(new {data = ClientesTodos});
-        }   
+       
 
         // GET: Clientes/Details/5
         public async Task<IActionResult> Details(Guid? id)

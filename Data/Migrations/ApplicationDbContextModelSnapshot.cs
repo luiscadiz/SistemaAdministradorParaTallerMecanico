@@ -253,30 +253,110 @@ namespace SistemaAdminTaller.Data.Migrations
                     b.ToTable("Cliente");
                 });
 
+            modelBuilder.Entity("SistemaAdminTaller.Models.Mecanico", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Apellido")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<long>("DNI")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Telefono")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Mecanicos");
+                });
+
+            modelBuilder.Entity("SistemaAdminTaller.Models.Repuesto", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<float>("Precio")
+                        .HasColumnType("real");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Repuestos");
+                });
+
             modelBuilder.Entity("SistemaAdminTaller.Models.Vehiculo", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ClienteID")
+                    b.Property<string>("Averia")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<Guid?>("ClienteId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Estado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaEntrada")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaSalida")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Marca")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<Guid?>("MecanicoId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Modelo")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Patente")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Presupuesto")
+                        .HasColumnType("real");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("ClienteID");
+                    b.HasIndex("ClienteId");
 
-                    b.ToTable("Vehiculo");
+                    b.HasIndex("MecanicoId");
+
+                    b.ToTable("Vehiculos");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -332,9 +412,17 @@ namespace SistemaAdminTaller.Data.Migrations
 
             modelBuilder.Entity("SistemaAdminTaller.Models.Vehiculo", b =>
                 {
-                    b.HasOne("SistemaAdminTaller.Models.Cliente", null)
+                    b.HasOne("SistemaAdminTaller.Models.Cliente", "Cliente")
                         .WithMany("VehiculosCliente")
-                        .HasForeignKey("ClienteID");
+                        .HasForeignKey("ClienteId");
+
+                    b.HasOne("SistemaAdminTaller.Models.Mecanico", "Mecanico")
+                        .WithMany()
+                        .HasForeignKey("MecanicoId");
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("Mecanico");
                 });
 
             modelBuilder.Entity("SistemaAdminTaller.Models.Cliente", b =>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bJYxqLJq4+aBJXSfSDKMhGuBUAqpf9Rjy6y7TXf2mK+3vQEZ3t2ur8FHDgFKM1VDzOYxYbL+3BVYWQFcnaeoDQ==",
+  "dgSpecHash": "NThCAn+LMCcfHKfzn9KpQJItYqIKOmHEis1ZzUw438NKmnXJcEScfOTRyDxgHSixCFRuwbgErDgmwwOLTix//Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\SistemaAdminTaller.csproj",
+  "projectFilePath": "C:\\Users\\Luis Cadiz\\Desktop\\SistemaAdministradorParaTallerMecanico\\SistemaAdminTaller.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luis Cadiz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Luis Cadiz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",

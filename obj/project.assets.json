@@ -7885,11 +7885,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\SistemaAdminTaller.csproj",
+      "projectUniqueName": "C:\\Users\\Luis Cadiz\\Desktop\\SistemaAdministradorParaTallerMecanico\\SistemaAdminTaller.csproj",
       "projectName": "SistemaAdminTaller",
-      "projectPath": "C:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\SistemaAdminTaller.csproj",
+      "projectPath": "C:\\Users\\Luis Cadiz\\Desktop\\SistemaAdministradorParaTallerMecanico\\SistemaAdminTaller.csproj",
       "packagesPath": "C:\\Users\\Luis Cadiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luis Cadiz\\Desktop\\SistemaAdminTaller\\obj\\",
+      "outputPath": "C:\\Users\\Luis Cadiz\\Desktop\\SistemaAdministradorParaTallerMecanico\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Luis Cadiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
