@@ -15703,6 +15703,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Luis Cadiz\\Desktop\\SistemaAdministradorParaTallerMecanico\\Views\\Vehiculos\\Registrar.cshtml",
+      "TargetPath": "Views\\Vehiculos\\Registrar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Luis Cadiz\\Desktop\\SistemaAdministradorParaTallerMecanico\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "FileKind": "mvc"

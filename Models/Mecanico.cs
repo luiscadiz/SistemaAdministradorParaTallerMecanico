@@ -20,6 +20,10 @@ namespace SistemaAdminTaller.Models
         [Required(ErrorMessage="El nombre es requerido")]
         public string Telefono { get; set; }
         public long DNI { get; set; }
- 
+
+        public string NombreCompleto
+        {
+            get{ return Nombre + "," + Apellido;}
+        }
     }
 }

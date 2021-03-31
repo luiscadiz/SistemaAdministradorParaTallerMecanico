@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="Luis Cadiz" />
     <title>Mecanica Guerrero</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.css" rel="stylesheet" />
@@ -47,7 +47,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <a class="nav-link">
-                            <img src="assets/img/logo_Taller.png" alt="LogoTaller" width="160" height="160" class="logo">
+                            <img src="~/assets/img/logo_Taller.png" alt="LogoTaller" width="160" height="160" class="align-item-center">
                         </a>
                         <a class="nav-link" asp-controller="Home" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
@@ -70,7 +70,7 @@
                         </a>
                         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" asp-controller="Reparaciones" asp-action="Registrar">Agregar Reparación</a>
+                                <a class="nav-link" asp-controller="Vehiculos" asp-action="Registrar">Agregar Reparación</a>
                                 <a class="nav-link" asp-controller="Reparaciones" asp-action="VerReparaciones">Ver Reparaciones</a>
                             </nav>
                         </div>
@@ -109,7 +109,7 @@
     <script src="~/lib/datatables.net/jquery.dataTables.min.js"></script>
     <script src="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="~/js/scripts.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

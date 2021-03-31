@@ -1425,3 +1425,4 @@ C:\Users\Luis Cadiz\Desktop\SistemaAdministradorParaTallerMecanico\obj\Debug\net
 C:\Users\Luis Cadiz\Desktop\SistemaAdministradorParaTallerMecanico\obj\Debug\net5.0\ref\SistemaAdminTaller.dll
 C:\Users\Luis Cadiz\Desktop\SistemaAdministradorParaTallerMecanico\obj\Debug\net5.0\SistemaAdminTaller.pdb
 C:\Users\Luis Cadiz\Desktop\SistemaAdministradorParaTallerMecanico\obj\Debug\net5.0\SistemaAdminTaller.genruntimeconfig.cache
+C:\Users\Luis Cadiz\Desktop\SistemaAdministradorParaTallerMecanico\obj\Debug\net5.0\Razor\Views\Vehiculos\Registrar.cshtml.g.cs

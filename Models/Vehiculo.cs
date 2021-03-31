@@ -37,11 +37,10 @@ namespace  SistemaAdminTaller.Models
         [Required(ErrorMessage = "El estado es requerido")]
         public bool Estado { get; set; }
         public float Presupuesto { get; set; }
-        
-        public Guid? ClienteId {get; set;}
         public Cliente Cliente {get; set;}
-        public Guid? MecanicoId {get;set;}
+        public Guid? ClienteID {get; set;}
         public Mecanico Mecanico {get; set;}
+        public Guid? MecanicoID {get;set;}
 
     }
 }
